@@ -20,7 +20,7 @@ function createOffersTemplate(offers, type) {
 }
 
 function createEditFormTemplate(tripPoint) {
-  const visibility = tripPoint.offersIDs.length === 0 ? 'visually-hidden' : '';
+  const visibility = getOffersByType(tripPoint.type).length === 0 ? 'visually-hidden' : '';
   const destination = getItemFromItemsById(destinations, tripPoint.destination);
   return (
     `<li class="trip-events__item">
